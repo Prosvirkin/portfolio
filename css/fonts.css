@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "LatoRegular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/LatoRegular.woff2);
+}
+
+@font-face {
+  font-family: "LatoBold";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/LatoBold.woff2);
+}
+
+@font-face {
+  font-family: "OpenSansRegular";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/OpenSansRegular/OpenSansRegular.woff);
+}
