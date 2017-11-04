@@ -71,7 +71,6 @@ header{
 	position: fixed;
 	top: 0px;
 	left: 0px;
-
 } 
 
 .header-border{
@@ -229,12 +228,12 @@ blog content
 }
 
 
-.blog-content_item img:hover{
-	-webkit-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-o-transform: scale(1.1);
-	cursor: pointer;
-}
+/*.blog-content_item img:hover{*/
+	/*-webkit-transform: scale(1.1);*/
+	/*-moz-transform: scale(1.1);*/
+	/*-o-transform: scale(1.1);*/
+	/*cursor: pointer;*/
+/*}*/
 
 .blog-content_item p{
 	font-family: OpenSansRegular;
@@ -409,17 +408,25 @@ TD, TH {
 	padding: 0 !important;
 }
 
+.not-found{
 
+	margin-top: 25px;
 
+	text-align: center;
+}
 
-
-
-
-
-
-
-
-
+.not-found h1{
+	font-family: "GothaProLig_0";
+	color: #222;
+	font-size: 130px;
+	padding-top:100px;
+	margin: 0;
+}
+.not-found p{
+	font-size: 28px;
+	color: #222;
+	font-family: "OpenSans-Regular_0";
+}
 
 
 

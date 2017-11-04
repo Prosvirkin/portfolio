@@ -1,9 +1,4 @@
 <?php
-    require_once ("core/lib.php");
-    require_once ("core/config.php");
-?>
-<?php require_once ("include/header.inc.php")?>
-<section class="home-content">
-    <?php require_once("include/routing.inc.php"); ?>
-</section>
-<?php require_once ("include/footer.inc.php") ?>
+header('Content-Type: text/html; charset=utf-8');
+ini_set('display_errors', 1);
+require_once "application/bootstrap.php";
