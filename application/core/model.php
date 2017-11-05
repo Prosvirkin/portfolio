@@ -2,7 +2,7 @@
 
 class Model
 {
-    protected  $mysqli;
+    protected $mysqli;
 
     function __construct()
     {

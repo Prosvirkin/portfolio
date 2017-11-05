@@ -2,7 +2,6 @@
 
 class Route
 {
-
     static function run()
     {
         $controllerName = "home";

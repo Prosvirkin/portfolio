@@ -9,6 +9,6 @@ class Error404 extends Controller
 
     function index()
     {
-        $this->view->generate("Error404.php", "TemplateView.php", "mainMenu.php");
+        $this->view->generate("Error404.php", "TemplateView.php", "MainMenu.php");
     }
 }

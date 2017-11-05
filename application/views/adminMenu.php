@@ -5,10 +5,11 @@
             <div class="menu">
                 <nav>
                     <ul class="dropdown_menu">
-                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/addWebsite" ?>"> Add Website</a></li>
-                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/addPost" ?>"> Add Post</a></li>
-                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/back" ?>"> Back to website</a></li>
-                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/exit" ?>"> Exit-></a></li>
+                        <li><a href="<?php echo 'http://'.$_SERVER['HTTP_HOST']."/admin/addWebsite" ?>">Добавить сайт</a></li>
+                        <li><a href="<?php echo 'http://'.$_SERVER['HTTP_HOST']."/admin/addPost" ?>"> Добавить пост</a></li>
+<!--                        <li><a href="--><?php //echo 'http://'.$_SERVER['HTTP_HOST']."/admin/addUser" ?><!--"> Добавить аккаунт</a></li>-->
+                        <li><a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'] ?>"> Вернуться на сайт</a></li>
+                        <li><a href="<?php echo 'http://'.$_SERVER['HTTP_HOST']."/admin" ?>"> Выход</a></li>
                     </ul>
                 </nav>
             </div>

@@ -11,10 +11,10 @@
             <div class="menu">
                 <nav>
                     <ul class="dropdown_menu">
-                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/home" ?>"> Home</a></li>
-                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/portfolio" ?>"> Portfolio</a></li>
-                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/blog" ?>"> Blog</a></li>
-                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/contact" ?>"> Contact</a></li>
+                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/home" ?>"> Домой</a></li>
+                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/portfolio" ?>"> Портфолио</a></li>
+                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/blog" ?>"> Блог</a></li>
+                        <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . "/contact" ?>"> Обратная связь</a></li>
                     </ul>
                 </nav>
             </div>

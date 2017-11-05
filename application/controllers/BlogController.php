@@ -16,8 +16,10 @@ class Blog extends Controller
 
     function post($id)
     {
-       $data = $this->model->getFullPost($id);
-       $this->view->generate("PostView.php", "TemplateView.php", "MainMenu.php", $data);
+        $data = $this->model->getFullPost($id);
+        $this->model->saveComment($id);
+        $posts = $this->model->getComments($id);
+        $this->view->generate("PostView.php", "TemplateView.php", "MainMenu.php", $data, $posts);
     }
 
 }
