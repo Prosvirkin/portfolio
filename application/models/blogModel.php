@@ -5,6 +5,7 @@ class blogModel extends Model
 
     function getFullPost($id)
     {
+        $this->emptyId($id);
         $post = [];
         $sql = "select header, content, image, datetime from blog where id = $id";
         if ($result = $this->mysqli->query($sql)) {
@@ -13,7 +14,12 @@ class blogModel extends Model
             }
             $result->close();
         }
-        return $post;
+        if (empty($post)) {
+            Route::ErrorPage404();
+        } else {
+            return $post;
+        }
+
     }
 
     function saveComment($id)

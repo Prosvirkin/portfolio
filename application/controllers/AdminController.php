@@ -10,6 +10,7 @@ class admin extends Controller
 
     public function index()
     {
+        $this->model->session();
         $data = $this->model->getWebsites();
         $posts = $this->model->getPosts();
         $this->view->generate("AdminView.php", "TemplateView.php", "AdminMenu.php", $data, $posts);
@@ -17,6 +18,7 @@ class admin extends Controller
 
     public function addWebsite()
     {
+        $this->model->session();
         $this->model->saveWebsite();
         $this->view->generate("AddWebsiteView.php", "TemplateView.php", "AdminMenu.php");
     }
@@ -34,6 +36,7 @@ class admin extends Controller
 
     public function addPost()
     {
+        $this->model->session();
         $this->model->savePost();
         $this->view->generate("AddPostView.php", "TemplateView.php", "AdminMenu.php");
     }
@@ -47,6 +50,24 @@ class admin extends Controller
     public function deletePost($id)
     {
         $this->model->deletePost($id);
+    }
+
+    public function Signup()
+    {
+        $this->model->session();
+        $data = $this->model->signup();
+        $this->view->generate("Signup.php", "TemplateView.php", "AdminMenu.php", $data);
+    }
+
+    public function Login()
+    {
+        $data = $this->model->login();
+        $this->view->generate("login.php", "TemplateView.php", "mainMenu.php", $data);
+    }
+
+    public function logOut()
+    {
+        $this->model->logout();
     }
 
 

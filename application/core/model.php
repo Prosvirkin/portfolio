@@ -9,9 +9,16 @@ class Model
         $this->mysqli = new mysqli("localhost", "root", "", "portfolio");
         $this->mysqli->query("SET NAMES utf8;");
 
-        if($this->mysqli->connect_errno){
-            echo "Не удалось подключиться к БД:\n".$this->mysqli->connect_error;
+        if ($this->mysqli->connect_errno) {
+            echo "Не удалось подключиться к БД:\n" . $this->mysqli->connect_error;
             exit();
+        }
+    }
+
+    protected function emptyId($id)
+    {
+        if (empty($id)) {
+            Route::ErrorPage404();
         }
     }
 

@@ -19,20 +19,20 @@ class Route
             $actionName = $request[1];
         }
 
-        $controllerPath = "application/controllers/".ucfirst($controllerName)."Controller.php";
+        $controllerPath = "application/controllers/" . ucfirst($controllerName) . "Controller.php";
         if (file_exists($controllerPath)) {
             require_once $controllerPath;
         } else {
             Route::ErrorPage404();
         }
 
-        $modelName = $controllerName."Model";
-        $modelPath = "application/models/".$modelName.".php";
+        $modelName = $controllerName . "Model";
+        $modelPath = "application/models/" . $modelName . ".php";
         if (file_exists($modelPath)) {
             require_once $modelPath;
         }
 
-        if(!empty($request[2])){
+        if (!empty($request[2])) {
             $param = $request[2];
         }
 

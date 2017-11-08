@@ -29,7 +29,7 @@ CREATE TABLE `Blog` (
   `image` mediumblob NOT NULL,
   `datetime` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,7 +56,7 @@ CREATE TABLE `comments` (
   `content` varchar(500) NOT NULL,
   `datetime` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,8 +65,33 @@ CREATE TABLE `comments` (
 
 LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
-INSERT INTO `comments` VALUES (1,1,'Кирилл','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem doloribus esse incidunt iure maxime necessitatibus optio quas ratione velit. Accusamus culpa deserunt, dolorem impedit ipsa nisi officia porro repellat.',1509893342),(2,2,'Аноним','Пост номер 2 ',1509893392),(3,1,'Аноним',' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem doloribus esse incidunt iure maxime necessitatibus optio quas ratione velit. Accusamus culpa deserunt, dolorem impedit ipsa nisi officia porro repellat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem doloribus esse incidunt iure maxime necessitatibus optio quas ratione velit. Accusamus culpa deserunt, dolorem impedit ipsa nisi officia porro repellat.',1509895400),(4,1,'Не аноним','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem doloribus esse incidunt iure maxime necessitatibus optio quas ratione velit. Accusamus culpa deserunt, dolorem impedit ipsa nisi officia porro repellat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem doloribus esse incidunt iure maxime necessitatibus optio quas ratione velit. Accusamus culpa deserunt, dolorem impedit ipsa nisi officia porro repellat.Lorem ipsum dolor sit amet, consectetur adipisic',1509895512);
+INSERT INTO `comments` VALUES (1,1,'Мистер Твистер','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem doloribus esse incidunt iure maxime necessitatibus optio quas ratione velit. Accusamus culpa deserunt, dolorem impedit ipsa nisi officia porro repellat.',1509893342),(2,2,'Аноним','Пост номер 2 ',1509893392),(3,1,'Аноним',' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem doloribus esse incidunt iure maxime necessitatibus optio quas ratione velit. Accusamus culpa deserunt, dolorem impedit ipsa nisi officia porro repellat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem doloribus esse incidunt iure maxime necessitatibus optio quas ratione velit. Accusamus culpa deserunt, dolorem impedit ipsa nisi officia porro repellat.',1509895400),(4,1,'Не аноним','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem doloribus esse incidunt iure maxime necessitatibus optio quas ratione velit. Accusamus culpa deserunt, dolorem impedit ipsa nisi officia porro repellat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem doloribus esse incidunt iure maxime necessitatibus optio quas ratione velit. Accusamus culpa deserunt, dolorem impedit ipsa nisi officia porro repellat.Lorem ipsum dolor sit amet, consectetur adipisic',1509895512),(5,2,'Пегий дудочник','Алгоритм сжатия, позволяющий сжимать данные, в частности звук и видео, без потери качества (коэффициент сжатия Вайсмана 5,9). Продвигается Ричардом Хендриксом  и его друзьями. Реализация алгоритма приняла вид платформы, с помощью который можно было быстро работать с данными. Например, скачать фильм за считанные секунды или организовать видеотрансляцию высокого качества, которую можно смотреть даже при медленном интернет-канале. Ричарда, к сожалению, подвела чрезмерная концентрация на технической',1509901880);
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'admin','$2y$10$C4fp3GfmgI3duTCZndtm9.HVaBAZfmY3PTBMPG9dDwxmDyxZtg0N6');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -83,7 +108,7 @@ CREATE TABLE `websites` (
   `reference` text,
   `image` mediumblob,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,4 +130,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-05 22:57:55
+-- Dump completed on 2017-11-08 14:48:16

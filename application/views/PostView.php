@@ -33,7 +33,7 @@
     <section class="admin-form">
         <form action="" method="post">
             <p>Имя:</p>
-            <input type="text" name="name"> <br>
+            <input type="text" name="name" placeholder=" Аноним"> <br>
             <p>Комментарий:</p>
             <textarea type="text" name="content" required> </textarea> <br>
             <input type="submit" value="Добавить">
